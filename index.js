@@ -35,28 +35,27 @@ app.post('/api/form', (req, res) => {
 		const htmlEmail = `
 			<h3>Contact Details</h3>
 			<ul>
+				<li>${req.body.type}</li>
 				<li>Email: ${req.body.email}</li>
 			</ul>
 		`
 
 
 		let transporter = nodemailer.createTransport({
-			host: 'smtp.ethereal.email',
-			port: 587,
-			secure: false,
+			service: 'gmail',
 			auth: {
-				user: 'hkbagnwtvx5i3eqr@ethereal.email',
-        		pass: 'CdmdnArqHXgCykgf2p'
+				user: 'legally.co@gmail.com',
+        		pass: 'poopypants'
 			}
 		})
 
 
 		let mailOptions = {
-			from: 'test@testaccount.com',
-			to: 'hkbagnwtvx5i3eqr@ethereal.email',
-			replyTo: 'test@testaccount.com',
-			subject: req.body.email,
-			text: req.body.question,
+			from: 'legally.co@gmail.com',
+			to: 'legally.co@gmail.com',
+			replyTo: 'legally.co@gmail.com',
+			subject: req.body.type + ': ' + req.body.email,
+			text: req.body.type + '\n' + req.body.email,
 			html: htmlEmail
 		}
 

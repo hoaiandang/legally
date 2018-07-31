@@ -1,0 +1,554 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0px;
+  z-index: 0;
+  transition-duration: 0.8s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+html {
+  width: 100vw;
+  background-color: #160836;
+  background-image: url("./people-purple.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu');
+
+.text {
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  height: 120px;
+  padding: 20px;
+  width: 90vw;
+  position: absolute;
+  z-index: 2;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+  color: white;
+}
+
+.logo {
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  left: 240px;
+  top: 48px;
+  opacity: 0.9;
+
+}
+
+input {
+  width: 400px;
+  border-radius: 200px;
+  font-family: "Roboto", sans-serif;
+  padding: 16px 32px;
+  font-size: 16px;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  margin-left: 0px;
+}
+
+.button {
+  width: auto;
+  background-color: #6071E5;
+  border-radius: 200px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  padding: 20px 40px;
+  font-size: 18px;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.button:active {
+  opacity: 0.8;
+  border-color: #707070;
+  box-shadow: none;
+}
+
+.button:hover {
+  background: linear-gradient(70deg, #6c7fff, #A186BF);
+  cursor: pointer;
+}
+
+.button2 {
+  width: auto;
+  border-radius: 200px;
+  font-family: "Roboto", sans-serif;
+  padding: 18px 38px;
+  font-size: 18px;
+  text-align: center;
+  margin: 10px;
+  margin-left: 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  border-color: #6071E5;
+  border-style: solid;
+  border-width: 2px;
+  color: #6071E5;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+
+}
+
+.button2:active {
+  opacity: 0.8;
+  box-shadow: none;
+}
+
+.button2:hover {
+  background: linear-gradient(70deg, #6c7fff, #A186BF);
+  color: white;
+  border-width: 0;
+  padding: 20px 40px;
+  cursor: pointer;
+  text-shadow: none;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 64px;
+  position: relative;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.big {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px;
+  font-weight: 'bold';
+  margin: 0px;
+  opacity: 0.9;
+  line-height: 68px;
+}
+
+.big2 {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 'bold';
+  margin: 0px;
+  opacity: 0.9;
+  line-height: 60px;
+}
+
+.big3 {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 'bold';
+  margin: 0px;
+  opacity: 0.9;
+  line-height: 36px;
+}
+
+.big-paragraph {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  left: 240px;
+  position: relative;
+  justify-content: center;
+  width: 40vw;
+  height: 100vh;
+
+}
+
+.medium {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight: 'bold';
+  margin: 0px;
+  opacity: 0.9;
+  line-height: 36px;
+}
+
+.gradient {
+  background: linear-gradient(40deg, #160836, rgba(0,0,0,0));
+  height: 100%;
+  width:  100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 1;
+}
+
+.background {
+  height: 100vh;
+  width: 100%;
+}
+
+.info {
+  z-index: 1;
+  top: 96vh;
+  left: 0;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #434343;
+  background-color: white;
+}
+.info-background {
+  z-index: 0;
+  width: 100%;
+  position: absolute;
+  background-color: white;
+  height: 1000px;
+  top: 100vh;
+}
+
+.chatbot {
+  width: 720px;
+  height: 520px;
+  position: relative;
+  z-index: 2;
+  border-radius: 8px;
+  box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.5);
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #666666;
+
+}
+
+.make-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.chatbot-container {
+  transition-duration: 0.8s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  flex-direction: "column";
+  position: "absolute";
+  top: 0;
+  flex-direction: column;
+}
+
+.chatbot-nav-item {
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+  margin: 2px;
+}
+
+.blank {
+  background-color: #CFCFCF;
+}
+
+.exit {
+  background-color: #EE6C60;
+  margin-left: 6px;
+}
+
+.exit:hover {
+  cursor: pointer;
+}
+
+.chatbot-nav-bar {
+  display: flex;
+  height: 24px;
+  flex-direction: row;
+  align-items: center;
+  background-color: #F2F2F2;
+  border-radius: 6px 6px 0px 0px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+}
+
+.chat {
+  top: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  flex-direction: column-reverse;
+}
+
+.chat::-webkit-scrollbar {
+    display: none;
+}
+
+.message-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  align-content: center;
+  display: flex;
+}
+.message {
+  border-radius: 24px;
+  padding: 16px 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.first-message {
+  margin-top: 48px;
+}
+
+.bot {
+  justify-content: flex-start;
+
+}
+
+.user {
+  justify-content: flex-end;
+}
+
+.user > .message {
+  background-color: #6071E5;
+  color: white;
+}
+
+.bot > .message {
+  background-color: white;
+}
+
+.chatbot-back {
+  position: absolute;
+  top: 100;
+  left: 200;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  justify-content: flex-end;
+  right: 60px;
+  top: 32px;
+  position: relative;
+}
+
+.nav-item {
+  font-size: 16px;
+  color: white;
+  opacity: 0.8;
+  margin-left: 28px;
+  margin-right: 28px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.chatbot-back {
+    position: absolute;
+    top: 100px;
+    left: 10vw;
+  }
+
+.feature {
+  float: left;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  text-align: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.features-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: auto;
+  padding: 200px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.6);
+
+}
+
+.feature-header {
+  font-size: 36px;
+}
+
+  .line {
+    background-color: #6071E5;
+    height: 4px;
+    width: 140px;
+    color: red;
+    position: relative;
+    top: 0;
+    border-radius: 4px;
+  }
+
+.learn-more {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  left: 44vw;
+  position: relative;
+  justify-content: center;
+  width: 40vw;
+  height: 100vh;
+}
+
+.lawyer-container {
+  width: 640px;
+  left: 200px;
+  position: relative;
+}
+
+.bottomButton {
+  width: auto;
+  background-color: #6071E5;
+  border-radius: 200px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  padding: 20px 40px;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.bottomButton:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .info {
+    font-size: 16px;
+  }
+
+  .big {
+    text-align: left;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 28px;
+    font-weight: 'bold';
+    margin: 10px;
+    opacity: 0.9;
+  }
+
+  .big-paragraph {
+    align-items: center;
+    width: 100vw;
+    left: 0px;
+
+  }
+
+  .button {
+    padding: 12px 24px;
+    font-size: 14px;
+    margin: 10px;
+    width: 160px;
+  }
+
+  .button2 {
+    padding: 12px 24px;
+    font-size: 14px;
+    text-align: center;
+    margin: 10px;
+    margin-left: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    color: #6071E5;
+    text-shadow: none;
+    width: 160px;
+    background-color: #e1e3f4;
+    border-width: 0;
+  }
+
+  .button2:hover {
+    padding: 12px 24px;
+  }
+
+  input {
+    padding: 12px 24px;
+    font-size: 14px;
+    margin: 10px;
+    width: 160px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .nav-bar {
+    display: none;
+  }
+
+  .big-paragraph {
+    height: 75vh;
+  }
+
+  .big2 {
+    display: none;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+
+  }
+
+  .chatbot {
+    width: 400px;
+  }
+
+  .chatbot-back {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 28px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+  }
+
+  .buttons-container {
+    align-items: center;
+  }
+
+  .features-container {
+    padding: 80px;
+    margin-bottom: 0px;
+  }
+
+
+
+}
+
+
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  clear: both;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
