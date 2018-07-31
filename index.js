@@ -2,7 +2,13 @@ const express = require('express');
 const path = require('path');
 const generatePassword = require('password-generator');
 
+const bodyParser = require('body-parser')
+const nodemailer = require('nodemailer')
+
 const app = express();
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
@@ -19,14 +25,64 @@ app.get('/api/passwords', (req, res) => {
   // Return them as json
   res.json(passwords);
 
-  console.log(`Sent ${count} passwords`);
+  console.log(`Sent ${count} asswords :p`);
 });
+
+app.post('/api/form', (req, res) => {
+
+
+	nodemailer.createTestAccount((err, account) => {
+		const htmlEmail = `
+			<h3>Contact Details</h3>
+			<ul>
+				<li>Email: ${req.body.email}</li>
+			</ul>
+		`
+
+
+		let transporter = nodemailer.createTransport({
+			host: 'smtp.ethereal.email',
+			port: 587,
+			secure: false,
+			auth: {
+				user: 'hkbagnwtvx5i3eqr@ethereal.email',
+        		pass: 'CdmdnArqHXgCykgf2p'
+			}
+		})
+
+
+		let mailOptions = {
+			from: 'test@testaccount.com',
+			to: 'hkbagnwtvx5i3eqr@ethereal.email',
+			replyTo: 'test@testaccount.com',
+			subject: req.body.email,
+			text: req.body.question,
+			html: htmlEmail
+		}
+
+
+		console.log(htmlEmail)
+		console.log(req.body)
+
+		transporter.sendMail(mailOptions, (err, info) => {
+			if(err) {
+				return console.log(err)
+			}
+
+		})
+
+	})
+
+})
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
+
+
+
 
 const port = process.env.PORT || 5000;
 app.listen(port);
