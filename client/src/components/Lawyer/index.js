@@ -225,7 +225,7 @@ class App extends Component {
 	        <div className="make-center" style={{backgroundColor: "#E8E8E8", position: "relative", zIndex: -1, flexDirection: "column", alignItems: "flex-end"}}>
 
 	        	<div style={{position: "relative", marginRight: 200}}>
-            	<div className="medium" style={{color: "#434343", lineHeight: 8, textAlign: "right"}}>Connect to clients at your convenience</div>
+            	<div className="big" style={{color: "#434343", lineHeight: 4, textAlign: "right"}}>Connect to clients at your convenience</div>
             	<div style={{position: "relative", display: "flex", flexDirection: "row", justifyContent: "flex-end"}}>
             	<div className="button bottomButton" style={{marginLeft: 0, paddingRight: 80}} onClick={()=> window.open("http://m.me/legally.eia2018", "_blank")}>See how it works
                   <img src={messenger2} style={{position: "absolute", right: 32}}/>
